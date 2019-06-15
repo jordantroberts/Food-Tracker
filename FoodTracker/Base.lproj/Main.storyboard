@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TB3-bb-Tgg">
-                                <rect key="frame" x="20" y="64" width="151" height="96.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="424.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hN5-hJ-Nse">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4K-Lf-YPE">
-                                        <rect key="frame" x="0.0" y="28.5" width="151" height="30"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -40,6 +40,12 @@
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAM-ic-Dy3"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultphoto_2x" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-U3-Mic">
+                                        <rect key="frame" x="0.0" y="104.5" width="320" height="320"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="H8c-U3-Mic" secondAttribute="height" multiplier="1:1" id="vqz-Xh-l8e"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="s4K-Lf-YPE" secondAttribute="trailing" id="74q-NA-aVR"/>
@@ -53,13 +59,14 @@
                             <constraint firstItem="TB3-bb-Tgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EBF-AF-bgw"/>
                             <constraint firstItem="TB3-bb-Tgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H9q-q3-sLm"/>
                             <constraint firstItem="TB3-bb-Tgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MFj-Mf-sYm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TB3-bb-Tgg" secondAttribute="trailing" constant="243" id="rGb-iA-7wk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TB3-bb-Tgg" secondAttribute="trailing" constant="20" id="dod-QU-4Ow"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="hN5-hJ-Nse" id="HmJ-tt-duX"/>
                         <outlet property="nameTextField" destination="s4K-Lf-YPE" id="EvG-n3-dg1"/>
+                        <outlet property="photoImageview" destination="H8c-U3-Mic" id="EWd-8b-KUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,4 +74,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultphoto_2x" width="320" height="320"/>
+    </resources>
 </document>
