@@ -44,5 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+    }
 }
 
